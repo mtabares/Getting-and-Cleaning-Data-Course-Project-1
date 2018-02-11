@@ -68,8 +68,15 @@ Since the files are distibuted in diferent subdirectories, to avoid typos, all t
 Besides, since we decided to read the text files trough loops, we define the character vectors with the names of the files taht will be used in the for loops
 
 <h2>Obtain variable name vectors and Activity labels data frame</h2>
-features.txt is loaded, but only its second column is kept. This is the vector with the names of the variables of X_train.txt|X_test.txt. The names for the Inertial signals variables are the concatenation of each variable text file name and a number that identifies the reading.
-<h2>Load and obtain the Features Data set and Inertial Signal Data set. Add Activity labels</h2>
+features.txt is loaded, but only its second column is kept. This is the vector with the names of the variables of X_train.txt|X_test.txt. The names for the Inertial signals variables are the concatenation of each variable text file name and a number that identifies the reading. Then activity_labels.txt is loaded as activity_labels data frame.
+<h2>Load and obtain the Features data set and Inertial Signal Data set. Add Activity labels</h2>
+
+<h3>Load and obtain Features data set, adding Activity labels</h3>
+For every element of the character vector with the test files names, it will be created a data.frame or a vector with the contents of that file. If the file being loaded is Subject_test.txt, then that vector initializes a data frame called testData. 
+If the file is Y_test.txt, then first it is added to it a new column with the row numbers that is called "index". Then, Y_test is merged with the activity_labels data frame. This modifies the order that initally had Y_test, and it is required to restore it before we can merged Y_test with the testData data frame. "Index" variable is used to order Y_test and to substitute its row numbers. Then Y_test columns are combined with the ones testData data frame using cbind(). If the file is X_test.txt, then its columns are directly combined with the ones testData data frame using cbind().
+The explanation is equivalent for the for loop for train files.
+After this two loops, first it is discarded the index that was created in the loop for Y_test or Y_train in testData and trainData, and then a new data frame (featuresData) is produced by appending the rows of trainData to testData. Then, "Key" column is added to that data frame using its row numbers. This variable identifies uniquely each record.
+
 
 <h2>Subset the mean and standard deviation of each measurement</h2>
 From the featuresData data frame, the code extracts a data frame called meanStdData which only contains the "Key", "Subject", "Activity", "ActivityLabel" variables and those variables whose name contains "mean(" or "std(". 
