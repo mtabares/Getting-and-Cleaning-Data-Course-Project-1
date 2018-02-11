@@ -22,22 +22,18 @@ The sensor signals (accelerometer and gyroscope) were pre-processed by applying 
 
 The raw data includes 
 - 'activity_labels.txt': Links the class labels with their activity name.
-
 - subject_train.txt|subject_test.txt: Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
-  
-
 - Y_train.txt|Y_test.txt:  Each row identifies the activity that the subject performed for each window sample. Its range is from 1 to 6.
-- total_acc_x_train.txt|total_acc_x_test.txt: The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
+- Inertial Signals data:
+  - total_acc_x_train.txt|total_acc_x_test.txt: The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the total_acc_y_train.txt|total_acc_y_test.txt and total_acc_z_train.txt|total_acc_z_test.txt files for the Y and Z axis. 
 
-- body_acc_x_train.txt|body_acc_x_test.txt: The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
+  - body_acc_x_train.txt|body_acc_x_test.txt: The body acceleration signal obtained by subtracting the gravity from the total acceleration. The same description applies for the body_acc_y_train.txt|body_acc_y_test.txt and body_acc_z_train.txt|body_acc_z_test.txt files for the Y and Z axis. 
 
-- body_gyro_x_train.txt|body_gyro_x_test.txt: The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
+  - body_gyro_x_train.txt|body_gyro_x_test.txt: The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. The same description applies for the body_gyro_y_train.txt|body_gyro_y_test and body_gyro_z_train.txt|body_gyro_z_test files for the Y and Z axis. 
 
-- X_train.txt|X_test.txt: 
+- X_train.txt|X_test.txt: Using the Inertial Signals data, Jerk and frequency domain signals are calculated, and from them and from the Inertial Signals, a set of features was calculated. X_train.txt|X_test.txt files contain that set of features. Among that set of features, there are the mean and the standard desviation of each signal.
+-features.text: This files contains the names of the features of the X_train.txt|X_test.txt files
 
-- 'test/y_test.txt': Test labels.
-
-The following files are available for the train and test data. Their descriptions are equivalent. 
 
 
 
