@@ -1,11 +1,10 @@
-# Codebook
-Getting and Cleaning Data Course Project
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set.
+# Codebook of Getting and Cleaning Data Course Project
+
 The purpose of this project is to the ability of the student to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. The raw data comes from the Human Activity Recognition Using Smartphones Data Set([http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)) and it is available at:
 
 [https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
 
-The student is asked to create one R script called run_analysis.R that does the following:
+The student is asked for create one R script called run_analysis.R that does the following:
 
   1. Merges the training and the test sets to create one data set.
   2. Extracts only the measurements on the mean and standard deviation for each measurement.
@@ -33,26 +32,40 @@ The student is asked to create one R script called run_analysis.R that does the 
 For detailed information about the steps, please refer to the [Readme.md](https://github.com/danieljmv01/Getting-and-Cleaning-Data-Course-Project/blob/master/Readme.md) file.
 
 
-Decisions:
-Load and merge data from Inertial Signal files. Reshape it to long
-Key variable identifing record. Assumption of a common index not included.
-Extract inly mean( and std( measures
-Name the variables capitalizing the first word of each 
+### Decisions:
+Several decisions has been made that determine the output of the script and how it obtained
+#### Inertial signal files:
+  The requirement 1 is not clear about the files to be loaded. Since the requirement 2 ask for extract only the mean and standard desviation variables, the inertial signal files will not be used at all, so it is reasonable to think that they are not required by the requirement 2. Nevertheless, I decided to load them an keep their data in a data frame that is available at the end of the code execution (inertialSignalData), but it is not exported. 
+  Since every inertial file has 128 variables, one per the 128 readings of each 2.56 second window, and there are 9 files, adding the identifiers ("Key","Subject","Activity", "ActivityLabel"), the data frame has 1156 variables in wide format. In order to make it more user friendly, it is reshaped to long format. So the result is a data set with 14 variables, the 4 initial identifiers, an additional indetifier for the reading number of each window, and 9 variables that match the 9 files of Inertial Signal directory. 
+  It is important to note that, even in the long format, the "Key" variable still identifies uniquely each window, so it would be posible to merge this that with the features data set, if someone ever wanted. Nevertheless, the result would be a very large table.
+#### Load and Merging of the data sets:
+The merge of the data set has been done assuming that the files are order according to a common index that uniquely identifies each record but that was ommited. I worked with this assumption because there is no uniquely identifier in each file, so it was reasonable to suppose that the files are ordered in the same way. This was implicitly declared in the Readme file of the raw data set. 
+If the data sets are ordered in the same way ( so the first line of every file is the first record, and so on), if we just combine the columns maintaining the original order, the merge is correct. This is the reason of using cbind(). It was the simplest way to obtain the desired result.
+About test and train files, since they were originally the same file appending one to another is enough to obtain the required data set. That is why rbind() were used.
+
+Since thera was a lot of files to be loaded, for-loops were used to load them. This has implications about how the assigning of the loaded data set was done ( the use of eval() and call() functions). Also, in the same loop, the data sets in the same directory are merged in a single data set for that directory. 
+
+#### Labeling of Activity variable:
+The requirement 3 is required after the merge of the data sets and the extraction of the mean and standard desviation variables. Nevertheless, due to how the requirement 1 was done in the script (the use of for-loops), the the requirement 3 was done simultaneously with the requirement 1. Adding the Activity labels inside the for-loops was easier than doing it later.
+
+#### Exctraction of the mean and standard desviation variables:
+The requirement 2 ask for extracts only the measurements on the mean and standard deviation for each measurement. There are several features whose names that contains "means" or "std" strings. But according to features_info.txt, the features whose names that contains "mean()" and "std()" are those that contain the mean value and the standard desvition. Thus, I considered that these should be the extracted ones and other features (as the features whose names that contains "meanFreq()") must be discarded.
+#### Naming of the variables:
+
+The Naming of the variables was done according to the following points:
+
+ -  There must not be any punctuation character in the variable names.
+ -  Every word inside a variable name must have its first letter capitalized.
+ -  The abbreviations must be susbtituted by its corresponding whole word.
 
 
+## Codebook of TidyData.txt
 
-## Description of the variables in the tiny_data.txt file General description of the file including:
+  The TidyData.txt is a data set with 180 observations and 68 variables. Those variables are described in following table.
 
-   Dimensions of the dataset
-    Summary of the data
-    Variables present in the dataset
-
-(you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
-
-'data.frame':	180 obs. of  68 variables:
 <table border=0 cellpadding=0 cellspacing=0 width=1339 style='border-collapse:
  collapse;table-layout:fixed;width:1005pt'>
- <col width=329 style='mso-width-source:userset;mso-width-alt:12032;width:247pt'>
+ <col width=200 style='mso-width-source:userset;mso-width-alt:12032;width:247pt'>
  <col width=80 style='width:60pt'>
  <col width=97 style='mso-width-source:userset;mso-width-alt:3547;width:73pt'>
  <col width=138 style='mso-width-source:userset;mso-width-alt:5046;width:104pt'>
@@ -1625,9 +1638,3 @@ Name the variables capitalizing the first word of each
   style='mso-spacerun:yes'>  </span>three-dimensional<span
   style='mso-spacerun:yes'>  </span>signals per 2.56 seconds window from the
   smartphone gyroscope.</td>
-Some information on the variable including:
-
-   Class of the variable
-    Unique values/levels of the variable
-    Unit of measurement (if no unit of measurement list this as well)
-    In case names follow some schema, describe how entries were constructed (for example time-body-gyroscope-z has 4 levels of descriptors. Describe these 4 levels).
