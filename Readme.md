@@ -14,8 +14,10 @@ The purpose of this project is to the ability of the student to collect, work wi
   4. Appropriately labels the data set with descriptive variable names.
   5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
   
-The raw data comes from the Human Activity Recognition Using Smartphones Data Set(http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) and it is available at:
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+The raw data comes from the Human Activity Recognition Using Smartphones Data Set([http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)) and it is available at:
+
+[https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+
 This data is the results of some experiments that have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. The experiments have been video-recorded to label the data manually. The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating the training data and 30% the test data. 
 
 The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
@@ -32,11 +34,7 @@ The raw data includes
   - body_gyro_x_train.txt|body_gyro_x_test.txt: The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. The same description applies for the body_gyro_y_train.txt|body_gyro_y_test and body_gyro_z_train.txt|body_gyro_z_test files for the Y and Z axis. 
 
 - X_train.txt|X_test.txt: Using the Inertial Signals data, Jerk and frequency domain signals are calculated, and from them and from the Inertial Signals, a set of features was calculated. X_train.txt|X_test.txt files contain that set of features. Among that set of features, there are the mean and the standard desviation of each signal.
--features.text: This files contains the names of the features of the X_train.txt|X_test.txt files
-
-
-
-
+-features.text: This files contains the names of the features of the X_train.txt|X_test.txt files.
 
 
 <h1 id=contents>Repository Contents</h1>
@@ -45,23 +43,19 @@ The raw data includes
 <table>
 <tr><th>File Name</th><th>Description</th></tr>
 <tr><td valign=top>README.md</td><td>Documentation explaining the project and how to use files contained in the repository.</td></tr>
-<tr><td valign=top>run_analysis.R</td><td>R script to read</td></tr>
-<tr><td valign=top>Codebook.md</td><td>Documentation</td></tr>
+<tr><td valign=top>run_analysis.R</td><td>R script to read the Human Activity Recognition Using Smartphones Data Set and produce an ordered data set from it</td></tr>
+<tr><td valign=top>Codebook.md</td><td>Documentation about the variables and some other stuff</td></tr>
 </table>
 
 <h1 id=concepts>Key Concepts</h1>
-<h2>Loading the text files through loops</h2>
-The 
+Most of the R script is really simple. Nevertheless, there are two points that can generate confusion: the loading the text files through loops using eval() and call() functions and how the data sets are merge. 
+
 <code>eval(call("<-", as.name(fileName), read.table(paste(pathTestInsig,fileName,".txt",sep = ""),header = FALSE)))</code>
+This expression is used because the following won't work:
+<code>fileName<-read.table(paste(pathTestInsig,fileName,".txt",sep = ""),header = FALSE)</code>
+  This is because fileName's class is character, and in order that the expression above worked, its class should be symbol. The first expression was used instead, obtaining the output that was desired for the second.
+  About the merging of the data set, in the Readme.txt that accompanied the raw data files it was implicitly declared that the all the files was ordered according to a common index, not included in the data. So, the use of cbind() to merge the files is correct, since the records are already ordered in the same way.
 
-Techniques for reading data from a variety of sources are covered during weeks one and two, including XML, JSON, Excel files, a
-
-  1. Use of <code>eval(call("<-", as.name(fileName), read.table(paste(pathTestInsig,
-                                                            fileName,
-                                                            ".txt",
-                                                            sep = ""),
-                                                      header = FALSE)))</code> to split the data into household and person level records,
-  
 
 <h1 id=process>The Process</h1>
 The objective is to build a tidy data set with the average of each variable for each activity and each subject from the Human Activity Recognition Using Smartphones Data Set. Despite the output required, 
@@ -69,7 +63,11 @@ The objective is to build a tidy data set with the average of each variable for 
 
 
 <h2>Obtain the raw data files</h2>
+First, the script checks if the required files are in the working directory. If not, it downloads it to the working directory. Then, it checks if the zip file has been uncompressed in the working directory and uncompress it if not.
 <h2>Declare relative paths and file names vectors</h2>
+Since the files are distibuted in diferent subdirectories, to avoid typos, all the paths to that subdirectories are stored in string variables. That variables will be used when reading then text files.
+Besides, since we decided to read the text files trough loops, we define the character vectors with the names of the files taht will be used in the for loops
+
 <h2>Obtain variable name vectors and Activity labels data frame</h2>
 <h2>Load and obtain the Features Data set and Inertial Signal Data set. Add Activity labels</h2>
 <h2>Subset the mean and standard deviation of each measurement</h2>
