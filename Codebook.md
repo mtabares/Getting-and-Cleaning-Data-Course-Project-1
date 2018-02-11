@@ -50,87 +50,1581 @@ Name the variables capitalizing the first word of each
 (you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
 
 'data.frame':	180 obs. of  68 variables:
-
- $ Subject                                  : int  1 1 1 1 1 1 2 2 2 2 ...
- 
- $ ActivityLabel                            : chr  "laying" "sitting" "standing" "walking" ...
- 
- $ BodyAccelerometerMeanX                   : num  0.222 0.261 0.279 0.277 0.289 ...
- 
- $ BodyAccelerometerMeanY                   : num  -0.04051 -0.00131 -0.01614 -0.01738 -0.00992 ...
- 
- $ BodyAccelerometerMeanZ                   : num  -0.113 -0.105 -0.111 -0.111 -0.108 ...
- 
- $ BodyAccelerometerStdX                    : num  -0.928 -0.977 -0.996 -0.284 0.03 ...
- 
- $ BodyAccelerometerStdY                    : num  -0.8368 -0.9226 -0.9732 0.1145 -0.0319 ...
- 
- $ BodyAccelerometerStdZ                    : num  -0.826 -0.94 -0.98 -0.26 -0.23 ...
- $ GravityAccelerometerMeanX                : num  -0.249 0.832 0.943 0.935 0.932 ...
- $ GravityAccelerometerMeanY                : num  0.706 0.204 -0.273 -0.282 -0.267 ...
- $ GravityAccelerometerMeanZ                : num  0.4458 0.332 0.0135 -0.0681 -0.0621 ...
- $ GravityAccelerometerStdX                 : num  -0.897 -0.968 -0.994 -0.977 -0.951 ...
- $ GravityAccelerometerStdY                 : num  -0.908 -0.936 -0.981 -0.971 -0.937 ...
- $ GravityAccelerometerStdZ                 : num  -0.852 -0.949 -0.976 -0.948 -0.896 ...
- $ BodyAccelerometerJerkMeanX               : num  0.0811 0.0775 0.0754 0.074 0.0542 ...
- $ BodyAccelerometerJerkMeanY               : num  0.003838 -0.000619 0.007976 0.028272 0.02965 ...
- $ BodyAccelerometerJerkMeanZ               : num  0.01083 -0.00337 -0.00369 -0.00417 -0.01097 ...
- $ BodyAccelerometerJerkStdX                : num  -0.9585 -0.9864 -0.9946 -0.1136 -0.0123 ...
- $ BodyAccelerometerJerkStdY                : num  -0.924 -0.981 -0.986 0.067 -0.102 ...
- $ BodyAccelerometerJerkStdZ                : num  -0.955 -0.988 -0.992 -0.503 -0.346 ...
- $ BodyGyroscopeMeanX                       : num  -0.0166 -0.0454 -0.024 -0.0418 -0.0351 ...
- $ BodyGyroscopeMeanY                       : num  -0.0645 -0.0919 -0.0594 -0.0695 -0.0909 ...
- $ BodyGyroscopeMeanZ                       : num  0.1487 0.0629 0.0748 0.0849 0.0901 ...
- $ BodyGyroscopeStdX                        : num  -0.874 -0.977 -0.987 -0.474 -0.458 ...
- $ BodyGyroscopeStdY                        : num  -0.9511 -0.9665 -0.9877 -0.0546 -0.1263 ...
- $ BodyGyroscopeStdZ                        : num  -0.908 -0.941 -0.981 -0.344 -0.125 ...
- $ BodyGyroscopeJerkMeanX                   : num  -0.1073 -0.0937 -0.0996 -0.09 -0.074 ...
- $ BodyGyroscopeJerkMeanY                   : num  -0.0415 -0.0402 -0.0441 -0.0398 -0.044 ...
- $ BodyGyroscopeJerkMeanZ                   : num  -0.0741 -0.0467 -0.049 -0.0461 -0.027 ...
- $ BodyGyroscopeJerkStdX                    : num  -0.919 -0.992 -0.993 -0.207 -0.487 ...
- $ BodyGyroscopeJerkStdY                    : num  -0.968 -0.99 -0.995 -0.304 -0.239 ...
- $ BodyGyroscopeJerkStdZ                    : num  -0.958 -0.988 -0.992 -0.404 -0.269 ...
- $ BodyAccelerometerMagnitudeMean           : num  -0.8419 -0.9485 -0.9843 -0.137 0.0272 ...
- $ BodyAccelerometerMagnitudeStd            : num  -0.7951 -0.9271 -0.9819 -0.2197 0.0199 ...
- $ GravityAccelerometerMagnitudeMean        : num  -0.8419 -0.9485 -0.9843 -0.137 0.0272 ...
- $ GravityAccelerometerMagnitudeStd         : num  -0.7951 -0.9271 -0.9819 -0.2197 0.0199 ...
- $ BodyAccelerometerJerkMagnitudeMean       : num  -0.9544 -0.9874 -0.9924 -0.1414 -0.0894 ...
- $ BodyAccelerometerJerkMagnitudeStd        : num  -0.9282 -0.9841 -0.9931 -0.0745 -0.0258 ...
- $ BodyGyroscopeMagnitudeMean               : num  -0.8748 -0.9309 -0.9765 -0.161 -0.0757 ...
- $ BodyGyroscopeMagnitudeStd                : num  -0.819 -0.935 -0.979 -0.187 -0.226 ...
- $ BodyGyroscopeJerkMagnitudeMean           : num  -0.963 -0.992 -0.995 -0.299 -0.295 ...
- $ BodyGyroscopeJerkMagnitudeStd            : num  -0.936 -0.988 -0.995 -0.325 -0.307 ...
- $ FourierBodyAccelerometerMeanX            : num  -0.9391 -0.9796 -0.9952 -0.2028 0.0382 ...
- $ FourierBodyAccelerometerMeanY            : num  -0.86707 -0.94408 -0.97707 0.08971 0.00155 ...
- $ FourierBodyAccelerometerMeanZ            : num  -0.883 -0.959 -0.985 -0.332 -0.226 ...
- $ FourierBodyAccelerometerStdX             : num  -0.9244 -0.9764 -0.996 -0.3191 0.0243 ...
- $ FourierBodyAccelerometerStdY             : num  -0.834 -0.917 -0.972 0.056 -0.113 ...
- $ FourierBodyAccelerometerStdZ             : num  -0.813 -0.934 -0.978 -0.28 -0.298 ...
- $ FourierBodyAccelerometerJerkMeanX        : num  -0.9571 -0.9866 -0.9946 -0.1705 -0.0277 ...
- $ FourierBodyAccelerometerJerkMeanY        : num  -0.9225 -0.9816 -0.9854 -0.0352 -0.1287 ...
- $ FourierBodyAccelerometerJerkMeanZ        : num  -0.948 -0.986 -0.991 -0.469 -0.288 ...
- $ FourierBodyAccelerometerJerkStdX         : num  -0.9642 -0.9875 -0.9951 -0.1336 -0.0863 ...
- $ FourierBodyAccelerometerJerkStdY         : num  -0.932 -0.983 -0.987 0.107 -0.135 ...
- $ FourierBodyAccelerometerJerkStdZ         : num  -0.961 -0.988 -0.992 -0.535 -0.402 ...
- $ FourierBodyGyroscopeMeanX                : num  -0.85 -0.976 -0.986 -0.339 -0.352 ...
- $ FourierBodyGyroscopeMeanY                : num  -0.9522 -0.9758 -0.989 -0.1031 -0.0557 ...
- $ FourierBodyGyroscopeMeanZ                : num  -0.9093 -0.9513 -0.9808 -0.2559 -0.0319 ...
- $ FourierBodyGyroscopeStdX                 : num  -0.882 -0.978 -0.987 -0.517 -0.495 ...
- $ FourierBodyGyroscopeStdY                 : num  -0.9512 -0.9623 -0.9871 -0.0335 -0.1814 ...
- $ FourierBodyGyroscopeStdZ                 : num  -0.917 -0.944 -0.982 -0.437 -0.238 ...
- $ FourierBodyAccelerometerMagnitudeMean    : num  -0.8618 -0.9478 -0.9854 -0.1286 0.0966 ...
- $ FourierBodyAccelerometerMagnitudeStd     : num  -0.798 -0.928 -0.982 -0.398 -0.187 ...
- $ FourierBodyAccelerometerJerkMagnitudeMean: num  -0.9333 -0.9853 -0.9925 -0.0571 0.0262 ...
- $ FourierBodyAccelerometerJerkMagnitudeStd : num  -0.922 -0.982 -0.993 -0.103 -0.104 ...
- 
- $ FourierBodyGyroscopeMagnitudeMean        : num  -0.862 -0.958 -0.985 -0.199 -0.186 ...
- 
- $ FourierBodyGyroscopeMagnitudeStd         : num  -0.824 -0.932 -0.978 -0.321 -0.398 ...
- 
- $ FourierBodyGyroscopeJerkMagnitudeMean    : num  -0.942 -0.99 -0.995 -0.319 -0.282 ...
- 
- $ FourierBodyGyroscopeJerkMagnitudeStd     : num  -0.933 -0.987 -0.995 -0.382 -0.392
-
+<table border=0 cellpadding=0 cellspacing=0 width=1339 style='border-collapse:
+ collapse;table-layout:fixed;width:1005pt'>
+ <col width=329 style='mso-width-source:userset;mso-width-alt:12032;width:247pt'>
+ <col width=80 style='width:60pt'>
+ <col width=97 style='mso-width-source:userset;mso-width-alt:3547;width:73pt'>
+ <col width=138 style='mso-width-source:userset;mso-width-alt:5046;width:104pt'>
+ <col width=695 style='mso-width-source:userset;mso-width-alt:25417;width:521pt'>
+ <tr class=xl6410786 height=20 style='height:15.0pt'>
+  <td height=20 class=xl6310786 width=329 style='height:15.0pt;width:247pt;
+  font-size:11.0pt;color:white;font-weight:700;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:.5pt solid #4BACC6;
+  border-right:none;border-bottom:none;border-left:.5pt solid #4BACC6;
+  background:#4BACC6;mso-pattern:#4BACC6 none'>Variable</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:white;
+  font-weight:700;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:.5pt solid #4BACC6;border-right:none;
+  border-bottom:none;border-left:none;background:#4BACC6;mso-pattern:#4BACC6 none'>Class</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:white;
+  font-weight:700;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:.5pt solid #4BACC6;border-right:none;
+  border-bottom:none;border-left:none;background:#4BACC6;mso-pattern:#4BACC6 none'>Type</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:white;
+  font-weight:700;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:.5pt solid #4BACC6;border-right:none;
+  border-bottom:none;border-left:none;background:#4BACC6;mso-pattern:#4BACC6 none'>Units/levels</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:white;
+  font-weight:700;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:.5pt solid #4BACC6;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none;background:#4BACC6;mso-pattern:#4BACC6 none'>Description</td>
+ </tr>
+ <tr class=xl6410786 height=20 style='height:15.0pt'>
+  <td height=20 class=xl6310786 width=329 style='height:15.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>Subject</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Integer</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Identifier</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'></td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Identifier of the subject who performed
+  the activity for each window sample. Its range is 1 to 30.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>ActivityLabel</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Character</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Identifier</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'></td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Description of the activity that the
+  subject performed for each window sample. It has 6 Activity labels: (walking,
+  walking_upstairs, walking_downstairs, sitting, standing, laying)</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerMeanX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 body acceleration signals per 2.56 seconds window from the
+  smartphone accelerometer X axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerMeanY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 body acceleration signals per 2.56 seconds window from the
+  smartphone accelerometer Y axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerMeanZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 body acceleration signals per 2.56 seconds window from the
+  smartphone accelerometer Z axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerStdX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 body acceleration signals per 2.56 seconds
+  window from the smartphone accelerometer X axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerStdY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 body acceleration signals per 2.56 seconds
+  window from the smartphone accelerometer Y axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerStdZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 body acceleration signals per 2.56 seconds
+  window from the smartphone accelerometer Z axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>GravityAccelerometerMeanX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 gravity acceleration signals per 2.56 seconds window from the
+  smartphone accelerometer X axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>GravityAccelerometerMeanY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 gravity acceleration signals per 2.56 seconds window from the
+  smartphone accelerometer Y axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>GravityAccelerometerMeanZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 gravity acceleration signals per 2.56 seconds window from the
+  smartphone accelerometer Z axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>GravityAccelerometerStdX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 gravity acceleration signals per 2.56 seconds
+  window from the smartphone accelerometer X axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>GravityAccelerometerStdY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 gravity acceleration signals per 2.56 seconds
+  window from the smartphone accelerometer Y axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>GravityAccelerometerStdZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 gravity acceleration signals per 2.56 seconds
+  window from the smartphone accelerometer Z axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerJerkMeanX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 body Jerk<span style='mso-spacerun:yes'>  </span>acceleration
+  signals per 2.56 seconds window from the smartphone accelerometer X axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerJerkMeanY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 body Jerk<span style='mso-spacerun:yes'>  </span>acceleration
+  signals per 2.56 seconds window from the smartphone accelerometer Y axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerJerkMeanZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 body Jerk<span style='mso-spacerun:yes'>  </span>acceleration
+  signals per 2.56 seconds window from the smartphone accelerometer Z axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerJerkStdX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 body Jerk<span style='mso-spacerun:yes'> 
+  </span>acceleration signals per 2.56 seconds window from the smartphone
+  accelerometer X axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerJerkStdY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 body Jerk<span style='mso-spacerun:yes'> 
+  </span>acceleration signals per 2.56 seconds window from the smartphone
+  accelerometer Y axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerJerkStdZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 body Jerk<span style='mso-spacerun:yes'> 
+  </span>acceleration signals per 2.56 seconds window from the smartphone
+  accelerometer Z axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeMeanX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 body angular velocity signals per 2.56 seconds window from
+  the smartphone gyroscope X axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeMeanY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 body angular velocity signals per 2.56 seconds window from
+  the smartphone gyroscope Y axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeMeanZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 body angular velocity signals per 2.56 seconds window from
+  the smartphone gyroscope Z axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeStdX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 body angular velocity signals per 2.56 seconds
+  window from the smartphone gyroscope X axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeStdY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 body angular velocity signals per 2.56 seconds
+  window from the smartphone gyroscope Y axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeStdZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 body angular velocity signals per 2.56 seconds
+  window from the smartphone gyroscope Z axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeJerkMeanX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 body Jerk<span style='mso-spacerun:yes'>  </span>angular
+  velocity signals per 2.56 seconds window from the smartphone gyroscope X
+  axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeJerkMeanY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 body Jerk<span style='mso-spacerun:yes'>  </span>angular
+  velocity signals per 2.56 seconds window from the smartphone gyroscope Y
+  axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeJerkMeanZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the 128 body Jerk<span style='mso-spacerun:yes'>  </span>angular
+  velocity signals per 2.56 seconds window from the smartphone gyroscope Z
+  axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeJerkStdX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 body Jerk<span style='mso-spacerun:yes'> 
+  </span>angular velocity signals per 2.56 seconds window from the smartphone
+  gyroscope X axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeJerkStdY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 body Jerk<span style='mso-spacerun:yes'> 
+  </span>angular velocity signals per 2.56 seconds window from the smartphone
+  gyroscope Y axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeJerkStdZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the 128 body Jerk<span style='mso-spacerun:yes'> 
+  </span>angular velocity signals per 2.56 seconds window from the smartphone
+  gyroscope Z axis.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerMagnitudeMean</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Euclidean norm<span style='mso-spacerun:yes'>  </span>of the 128
+  body acceleration<span style='mso-spacerun:yes'> 
+  </span>three-dimensional<span style='mso-spacerun:yes'>  </span>signals per
+  2.56 seconds window from the smartphone accelerometer.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerMagnitudeStd</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Euclidean norm<span style='mso-spacerun:yes'> 
+  </span>of the 128 body acceleration<span style='mso-spacerun:yes'> 
+  </span>three-dimensional<span style='mso-spacerun:yes'>  </span>signals per
+  2.56 seconds window from the smartphone accelerometer.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>GravityAccelerometerMagnitudeMean</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Euclidean norm<span style='mso-spacerun:yes'>  </span>of the 128
+  gravity acceleration<span style='mso-spacerun:yes'> 
+  </span>three-dimensional<span style='mso-spacerun:yes'>  </span>signals per
+  2.56 seconds window from the smartphone accelerometer.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>GravityAccelerometerMagnitudeStd</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Euclidean norm<span style='mso-spacerun:yes'> 
+  </span>of the 128 gravity acceleration<span style='mso-spacerun:yes'> 
+  </span>three-dimensional<span style='mso-spacerun:yes'>  </span>signals per
+  2.56 seconds window from the smartphone accelerometer.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerJerkMagnitudeMean</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Euclidean norm<span style='mso-spacerun:yes'>  </span>of the 128
+  body Jerk<span style='mso-spacerun:yes'>  </span>acceleration<span
+  style='mso-spacerun:yes'>  </span>three-dimensional<span
+  style='mso-spacerun:yes'>  </span>signals per 2.56 seconds window from the
+  smartphone accelerometer.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyAccelerometerJerkMagnitudeStd</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Euclidean norm<span style='mso-spacerun:yes'> 
+  </span>of the 128 body Jerk<span style='mso-spacerun:yes'> 
+  </span>acceleration<span style='mso-spacerun:yes'>  </span>three-dimensional<span
+  style='mso-spacerun:yes'>  </span>signals per 2.56 seconds window from the
+  smartphone accelerometer.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeMagnitudeMean</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Euclidean norm<span style='mso-spacerun:yes'>  </span>of the 128
+  body angular velocity<span style='mso-spacerun:yes'> 
+  </span>three-dimensional<span style='mso-spacerun:yes'>  </span>signals per
+  2.56 seconds window from the smartphone gyroscope.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeMagnitudeStd</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Euclidean norm<span style='mso-spacerun:yes'> 
+  </span>of the 128 body angular velocity<span style='mso-spacerun:yes'> 
+  </span>three-dimensional<span style='mso-spacerun:yes'>  </span>signals per
+  2.56 seconds window from the smartphone gyroscope.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeJerkMagnitudeMean</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Euclidean norm<span style='mso-spacerun:yes'>  </span>of the 128
+  body Jerk<span style='mso-spacerun:yes'>  </span>angular velocity<span
+  style='mso-spacerun:yes'>  </span>three-dimensional<span
+  style='mso-spacerun:yes'>  </span>signals per 2.56 seconds window from the
+  smartphone gyroscope.</td>
+ </tr>
+ <tr class=xl6410786 height=40 style='height:30.0pt'>
+  <td height=40 class=xl6310786 width=329 style='height:30.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>BodyGyroscopeJerkMagnitudeStd</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Time domain signals<span
+  style='mso-spacerun:yes'> </span></td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Euclidean norm<span style='mso-spacerun:yes'> 
+  </span>of the 128 body Jerk<span style='mso-spacerun:yes'>  </span>angular
+  velocity<span style='mso-spacerun:yes'>  </span>three-dimensional<span
+  style='mso-spacerun:yes'>  </span>signals per 2.56 seconds window from the
+  smartphone gyroscope.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerMeanX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Fast Fourier Transformation (FFT) of the 128 gravity acceleration
+  signals per 2.56 seconds window from the smartphone accelerometer X axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerMeanY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Fast Fourier Transformation (FFT) of the 128 gravity acceleration
+  signals per 2.56 seconds window from the smartphone accelerometer Y axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerMeanZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Fast Fourier Transformation (FFT) of the 128 gravity acceleration
+  signals per 2.56 seconds window from the smartphone accelerometer Z axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerStdX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Fast Fourier Transformation (FFT) of the 128
+  gravity acceleration signals per 2.56 seconds window from the smartphone
+  accelerometer X axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerStdY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Fast Fourier Transformation (FFT) of the 128
+  gravity acceleration signals per 2.56 seconds window from the smartphone
+  accelerometer Y axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerStdZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Fast Fourier Transformation (FFT) of the 128
+  gravity acceleration signals per 2.56 seconds window from the smartphone
+  accelerometer Z axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerJerkMeanX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Fast Fourier Transformation (FFT) of the 128 gravity Jerk<span
+  style='mso-spacerun:yes'>  </span>acceleration signals per 2.56 seconds
+  window from the smartphone accelerometer X axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerJerkMeanY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Fast Fourier Transformation (FFT) of the 128 gravity Jerk<span
+  style='mso-spacerun:yes'>  </span>acceleration signals per 2.56 seconds
+  window from the smartphone accelerometer Y axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerJerkMeanZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Fast Fourier Transformation (FFT) of the 128 gravity Jerk<span
+  style='mso-spacerun:yes'>  </span>acceleration signals per 2.56 seconds
+  window from the smartphone accelerometer Z axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerJerkStdX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Fast Fourier Transformation (FFT) of the 128
+  gravity Jerk<span style='mso-spacerun:yes'>  </span>acceleration signals per
+  2.56 seconds window from the smartphone accelerometer X axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerJerkStdY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Fast Fourier Transformation (FFT) of the 128
+  gravity Jerk<span style='mso-spacerun:yes'>  </span>acceleration signals per
+  2.56 seconds window from the smartphone accelerometer Y axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerJerkStdZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Fast Fourier Transformation (FFT) of the 128
+  gravity Jerk<span style='mso-spacerun:yes'>  </span>acceleration signals per
+  2.56 seconds window from the smartphone accelerometer Z axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyGyroscopeMeanX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Fast Fourier Transformation (FFT) of the 128 gravity angular
+  velocity signals per 2.56 seconds window from the smartphone gyroscope X
+  axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyGyroscopeMeanY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Fast Fourier Transformation (FFT) of the 128 gravity angular
+  velocity signals per 2.56 seconds window from the smartphone gyroscope Y
+  axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyGyroscopeMeanZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Fast Fourier Transformation (FFT) of the 128 gravity angular
+  velocity signals per 2.56 seconds window from the smartphone gyroscope Z
+  axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyGyroscopeStdX</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Fast Fourier Transformation (FFT) of the 128
+  gravity angular velocity signals per 2.56 seconds window from the smartphone
+  gyroscope X axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyGyroscopeStdY</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Fast Fourier Transformation (FFT) of the 128
+  gravity angular velocity signals per 2.56 seconds window from the smartphone
+  gyroscope Y axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyGyroscopeStdZ</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Fast Fourier Transformation (FFT) of the 128
+  gravity angular velocity signals per 2.56 seconds window from the smartphone
+  gyroscope Z axis.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerMagnitudeMean</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Euclidean norm<span style='mso-spacerun:yes'>  </span>of the Fast
+  Fourier Transformation (FFT) of the 128 gravity acceleration<span
+  style='mso-spacerun:yes'>  </span>three-dimensional<span
+  style='mso-spacerun:yes'>  </span>signals per 2.56 seconds window from the
+  smartphone accelerometer.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerMagnitudeStd</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Euclidean norm<span style='mso-spacerun:yes'> 
+  </span>of the Fast Fourier Transformation (FFT) of the 128 gravity
+  acceleration<span style='mso-spacerun:yes'>  </span>three-dimensional<span
+  style='mso-spacerun:yes'>  </span>signals per 2.56 seconds window from the
+  smartphone accelerometer.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerJerkMagnitudeMean</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Euclidean norm<span style='mso-spacerun:yes'>  </span>of the Fast
+  Fourier Transformation (FFT) of the 128 gravity Jerk<span
+  style='mso-spacerun:yes'>  </span>acceleration<span
+  style='mso-spacerun:yes'>  </span>three-dimensional<span
+  style='mso-spacerun:yes'>  </span>signals per 2.56 seconds window from the
+  smartphone accelerometer.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyAccelerometerJerkMagnitudeStd</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Standard gravity units</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Euclidean norm<span style='mso-spacerun:yes'> 
+  </span>of the Fast Fourier Transformation (FFT) of the 128 gravity Jerk<span
+  style='mso-spacerun:yes'>  </span>acceleration<span
+  style='mso-spacerun:yes'>  </span>three-dimensional<span
+  style='mso-spacerun:yes'>  </span>signals per 2.56 seconds window from the
+  smartphone accelerometer.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyGyroscopeMagnitudeMean</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Euclidean norm<span style='mso-spacerun:yes'>  </span>of the Fast
+  Fourier Transformation (FFT) of the 128 gravity angular velocity<span
+  style='mso-spacerun:yes'>  </span>three-dimensional<span
+  style='mso-spacerun:yes'>  </span>signals per 2.56 seconds window from the
+  smartphone gyroscope.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyGyroscopeMagnitudeStd</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  standard desviation of the Euclidean norm<span style='mso-spacerun:yes'> 
+  </span>of the Fast Fourier Transformation (FFT) of the 128 gravity angular
+  velocity<span style='mso-spacerun:yes'>  </span>three-dimensional<span
+  style='mso-spacerun:yes'>  </span>signals per 2.56 seconds window from the
+  smartphone gyroscope.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:none;border-left:.5pt solid #4BACC6'>FrequencyBodyGyroscopeJerkMagnitudeMean</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:none;border-left:none'>Average by Subject and Activity of the
+  mean of the Euclidean norm<span style='mso-spacerun:yes'>  </span>of the Fast
+  Fourier Transformation (FFT) of the 128 gravity Jerk<span
+  style='mso-spacerun:yes'>  </span>angular velocity<span
+  style='mso-spacerun:yes'>  </span>three-dimensional<span
+  style='mso-spacerun:yes'>  </span>signals per 2.56 seconds window from the
+  smartphone gyroscope.</td>
+ </tr>
+ <tr class=xl6410786 height=60 style='height:45.0pt'>
+  <td height=60 class=xl6310786 width=329 style='height:45.0pt;width:247pt;
+  font-size:11.0pt;color:black;font-weight:400;text-decoration:none;text-underline-style:
+  none;text-line-through:none;font-family:Calibri;border-top:none;border-right:
+  none;border-bottom:.5pt solid #4BACC6;border-left:.5pt solid #4BACC6'>FrequencyBodyGyroscopeJerkMagnitudeStd</td>
+  <td class=xl6310786 width=80 style='width:60pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:none;border-bottom:
+  .5pt solid #4BACC6;border-left:none'>Numeric</td>
+  <td class=xl6310786 width=97 style='width:73pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:none;border-bottom:
+  .5pt solid #4BACC6;border-left:none'>Frequency domain signals</td>
+  <td class=xl6310786 width=138 style='width:104pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:none;border-bottom:
+  .5pt solid #4BACC6;border-left:none'>Radians/second</td>
+  <td class=xl6310786 width=695 style='width:521pt;font-size:11.0pt;color:black;
+  font-weight:400;text-decoration:none;text-underline-style:none;text-line-through:
+  none;font-family:Calibri;border-top:none;border-right:.5pt solid #4BACC6;
+  border-bottom:.5pt solid #4BACC6;border-left:none'>Average by Subject and
+  Activity of the standard desviation of the Euclidean norm<span
+  style='mso-spacerun:yes'>  </span>of the Fast Fourier Transformation (FFT) of
+  the 128 gravity Jerk<span style='mso-spacerun:yes'>  </span>angular velocity<span
+  style='mso-spacerun:yes'>  </span>three-dimensional<span
+  style='mso-spacerun:yes'>  </span>signals per 2.56 seconds window from the
+  smartphone gyroscope.</td>
 Some information on the variable including:
 
    Class of the variable
