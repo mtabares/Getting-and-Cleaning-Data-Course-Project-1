@@ -4,16 +4,24 @@ The purpose of this project is to demonstrate your ability to collect, work with
 
 
 ## Study design
+steps
+<h2>Obtain the raw data files</h2>
 
-### Collection of the raw data Description of how the data was collected.
+<h2>Obtain variable name vectors and Activity labels data frame</h2>
+<h2>Load and obtain the Features data set and Inertial Signal data set. Add Activity labels</h2>
+<h3>Load and obtain Features data set, adding Activity labels</h3>
+<h3>Load and obtain Inertial Signal data set data set, adding Activity labels</h3>
+<h2>Subset the mean and standard deviation of each measurement</h2>
+<h2>Set descriptive variables names</h2>
+<h2>Obtain the Final Dataset</h2>
+[Readme.md](https://github.com/danieljmv01/Getting-and-Cleaning-Data-Course-Project/blob/master/Readme.md)
+Decisions:
+Load and merge data from Inertial Signal files. Reshape it to long
+Key variable identifing record. Assumption of a common index not included.
+Extract inly mean( and std( measures
+Name the variables capitalizing the first word of each 
 
-### Notes on the original (raw) data Some additional notes (if avaialble, otherwise you can leave this section out).
 
-## Creating the tidy datafile
-
-### Guide to create the tidy data file Description on how to create the tidy data file (1. download the data, ...)/
-
-### Cleaning of the data Short, high-level description of what the cleaning script does. link to the readme document that describes the code in greater detail
 
 ## Description of the variables in the tiny_data.txt file General description of the file including:
 
@@ -23,9 +31,6 @@ The purpose of this project is to demonstrate your ability to collect, work with
 
 (you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
 
-### Variable 1 (repeat this section for all variables in the dataset) Short description of what the variable describes.
-
-
 'data.frame':	180 obs. of  68 variables:
 
  $ Subject                                  : int  1 1 1 1 1 1 2 2 2 2 ...
@@ -33,10 +38,15 @@ The purpose of this project is to demonstrate your ability to collect, work with
  $ ActivityLabel                            : chr  "laying" "sitting" "standing" "walking" ...
  
  $ BodyAccelerometerMeanX                   : num  0.222 0.261 0.279 0.277 0.289 ...
+ 
  $ BodyAccelerometerMeanY                   : num  -0.04051 -0.00131 -0.01614 -0.01738 -0.00992 ...
+ 
  $ BodyAccelerometerMeanZ                   : num  -0.113 -0.105 -0.111 -0.111 -0.108 ...
+ 
  $ BodyAccelerometerStdX                    : num  -0.928 -0.977 -0.996 -0.284 0.03 ...
+ 
  $ BodyAccelerometerStdY                    : num  -0.8368 -0.9226 -0.9732 0.1145 -0.0319 ...
+ 
  $ BodyAccelerometerStdZ                    : num  -0.826 -0.94 -0.98 -0.26 -0.23 ...
  $ GravityAccelerometerMeanX                : num  -0.249 0.832 0.943 0.935 0.932 ...
  $ GravityAccelerometerMeanY                : num  0.706 0.204 -0.273 -0.282 -0.267 ...
@@ -94,9 +104,13 @@ The purpose of this project is to demonstrate your ability to collect, work with
  $ FourierBodyAccelerometerMagnitudeStd     : num  -0.798 -0.928 -0.982 -0.398 -0.187 ...
  $ FourierBodyAccelerometerJerkMagnitudeMean: num  -0.9333 -0.9853 -0.9925 -0.0571 0.0262 ...
  $ FourierBodyAccelerometerJerkMagnitudeStd : num  -0.922 -0.982 -0.993 -0.103 -0.104 ...
+ 
  $ FourierBodyGyroscopeMagnitudeMean        : num  -0.862 -0.958 -0.985 -0.199 -0.186 ...
+ 
  $ FourierBodyGyroscopeMagnitudeStd         : num  -0.824 -0.932 -0.978 -0.321 -0.398 ...
+ 
  $ FourierBodyGyroscopeJerkMagnitudeMean    : num  -0.942 -0.99 -0.995 -0.319 -0.282 ...
+ 
  $ FourierBodyGyroscopeJerkMagnitudeStd     : num  -0.933 -0.987 -0.995 -0.382 -0.392
 
 Some information on the variable including:
