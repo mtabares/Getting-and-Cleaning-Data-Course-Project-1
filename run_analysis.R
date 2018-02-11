@@ -290,7 +290,7 @@ names(inertialSignalData)[1]<-"Key"
 
 ##inertialSignalData is too wide. Reshape it to long, using the "Key" to
 ##uniquely identify each record, and creating a new variable("reading") that
-##identifies which reading of the 2.56 seconds window.
+##identifies the reading of the 2.56 seconds window.
 
 inertialSignalData<-reshape(inertialSignalData, 
                    varying = 5:1156, 
@@ -309,7 +309,8 @@ rm(inSigTestData,
    inSigTrainData, 
    inertialSignalNames, 
    subject_test, 
-   subject_train)
+   subject_train, 
+   activity_labels)
 
 #==============================================================================-
 #Step 2: Extracts only the measurements on the mean and standard deviation for
@@ -330,7 +331,7 @@ names(meanStdData)<-gsub("[[:punct:]]","", names(meanStdData))
 names(meanStdData)<-gsub("mean","Mean", names(meanStdData))
 names(meanStdData)<-gsub("std","Std", names(meanStdData))
 names(meanStdData)<-gsub("^t","", names(meanStdData))
-names(meanStdData)<-gsub("^f","Fourier", names(meanStdData))
+names(meanStdData)<-gsub("^f","Frequency", names(meanStdData))
 names(meanStdData)<-gsub("Acc","Accelerometer", names(meanStdData))
 names(meanStdData)<-gsub("Gyro","Gyroscope", names(meanStdData))
 names(meanStdData)<-gsub("Mag","Magnitude", names(meanStdData))
