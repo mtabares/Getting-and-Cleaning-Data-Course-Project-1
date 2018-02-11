@@ -1,21 +1,36 @@
 # Codebook
 Getting and Cleaning Data Course Project
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set.
+The purpose of this project is to the ability of the student to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. The raw data comes from the Human Activity Recognition Using Smartphones Data Set([http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones)) and it is available at:
+
+[https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+
+The student is asked to create one R script called run_analysis.R that does the following:
+
+  1. Merges the training and the test sets to create one data set.
+  2. Extracts only the measurements on the mean and standard deviation for each measurement.
+  3. Uses descriptive activity names to name the activities in the data set
+  4. Appropriately labels the data set with descriptive variable names.
+  5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 
 ## Study design
-steps
-<h2>Obtain the raw data files</h2>
 
-<h2>Obtain variable name vectors and Activity labels data frame</h2>
-<h2>Load and obtain the Features data set and Inertial Signal data set. Add Activity labels</h2>
-<h3>Load and obtain Features data set, adding Activity labels</h3>
-<h3>Load and obtain Inertial Signal data set data set, adding Activity labels</h3>
-<h2>Subset the mean and standard deviation of each measurement</h2>
-<h2>Set descriptive variables names</h2>
-<h2>Obtain the Final Dataset</h2>
+### Steps of the Project
 
-[Readme.md](https://github.com/danieljmv01/Getting-and-Cleaning-Data-Course-Project/blob/master/Readme.md)
+   1. Obtain the raw data files
+
+   2. Obtain variable name vectors and Activity labels data frame.
+   
+   3. Load and obtain the Features data set and Inertial Signal data set. Add Activity labels.
+      - Load and obtain Features data set, adding Activity labels.
+      - Load and obtain Inertial Signal data set data set, adding Activity labels.
+   4. Subset the mean and standard deviation of each measurement.
+   5. Set descriptive variables names.
+   6. Obtain the Final Dataset.
+
+
+For detailed information about the steps, please refer to the [Readme.md](https://github.com/danieljmv01/Getting-and-Cleaning-Data-Course-Project/blob/master/Readme.md) file.
 
 
 Decisions:
