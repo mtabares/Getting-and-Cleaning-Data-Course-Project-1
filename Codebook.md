@@ -14,7 +14,10 @@ steps
 <h2>Subset the mean and standard deviation of each measurement</h2>
 <h2>Set descriptive variables names</h2>
 <h2>Obtain the Final Dataset</h2>
+
 [Readme.md](https://github.com/danieljmv01/Getting-and-Cleaning-Data-Course-Project/blob/master/Readme.md)
+
+
 Decisions:
 Load and merge data from Inertial Signal files. Reshape it to long
 Key variable identifing record. Assumption of a common index not included.
