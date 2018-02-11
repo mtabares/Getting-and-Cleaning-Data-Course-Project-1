@@ -50,17 +50,16 @@ The raw data includes
 <h1 id=concepts>Key Concepts</h1>
 Most of the R script is really simple. Nevertheless, there are two points that can generate confusion: the loading the text files through loops using eval() and call() functions and how the data sets are merge. 
 
+Why is it used eval() and call() functions? Why is it used an expression as the following?
+
 <code>eval(call("<-", as.name(fileName), read.table(paste(pathTestInsig,fileName,".txt",sep = ""),header = FALSE)))</code>
-This expression is used because the following won't work:
+This expression is used because the following expression won't work:
 <code>fileName<-read.table(paste(pathTestInsig,fileName,".txt",sep = ""),header = FALSE)</code>
   This is because fileName's class is character, and in order that the expression above worked, its class should be symbol. The first expression was used instead, obtaining the output that was desired for the second.
   About the merging of the data set, in the Readme.txt that accompanied the raw data files it was implicitly declared that the all the files was ordered according to a common index, not included in the data. So, the use of cbind() to merge the files is correct, since the records are already ordered in the same way.
 
-
 <h1 id=process>The Process</h1>
 The objective is to build a tidy data set with the average of each variable for each activity and each subject from the Human Activity Recognition Using Smartphones Data Set. Despite the output required, 
-
-
 
 <h2>Obtain the raw data files</h2>
 First, the script checks if the required files are in the working directory. If not, it downloads it to the working directory. Then, it checks if the zip file has been uncompressed in the working directory and uncompress it if not.
@@ -69,12 +68,15 @@ Since the files are distibuted in diferent subdirectories, to avoid typos, all t
 Besides, since we decided to read the text files trough loops, we define the character vectors with the names of the files taht will be used in the for loops
 
 <h2>Obtain variable name vectors and Activity labels data frame</h2>
+features.txt is loaded, but only its second column is kept. This is the vector with the names of the variables of X_train.txt|X_test.txt. The names for the Inertial signals variables are the concatenation of each variable text file name and a number that identifies the reading.
 <h2>Load and obtain the Features Data set and Inertial Signal Data set. Add Activity labels</h2>
+
 <h2>Subset the mean and standard deviation of each measurement</h2>
+
 <h2>Set descriptive variables names</h2>
+In this section, any punctuation character is removed from the variable names of meanStdData, as well as the abbreviation are substitutedby the complete word. Each word in each variable name has its first letter capitalized.
 <h2>Obtain the Final Dataset</h2>
-
-
+Finally, we use the melt() function over meanStdData so that "Key", "Subject", "Activity", "ActivityLabel" remain as identifiers. This allows us to use dcast() to obtain the average of each variable by "Subject" and "ActivityLabel". This data set (finalData) is exported as "TidyData.txt". 
 
 <h2>Conclusion</h2>
 By analyzing the contents of the data and code book spreadsheet, it turns out that there is a very elegant R solution for processing this data. Substituting the high performance <code>readr::read_fwf()</code> for the base <code>read.fwf()</code> it also becomes a high performance solution.  
