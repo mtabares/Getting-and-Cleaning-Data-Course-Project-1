@@ -72,7 +72,7 @@ features.txt is loaded, but only its second column is kept. This is the vector w
 <h2>Load and obtain the Features Data set and Inertial Signal Data set. Add Activity labels</h2>
 
 <h2>Subset the mean and standard deviation of each measurement</h2>
-
+From the featuresData data frame, the code extracts a data frame called meanStdData which only contains the "Key", "Subject", "Activity", "ActivityLabel" variables and those variables whose name contains "mean(" or "std(". 
 <h2>Set descriptive variables names</h2>
 In this section, any punctuation character is removed from the variable names of meanStdData, as well as the abbreviation are substitutedby the complete word. Each word in each variable name has its first letter capitalized.
 <h2>Obtain the Final Dataset</h2>
