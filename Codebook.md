@@ -1,21 +1,21 @@
-#Codebook
+# Codebook
 Getting and Cleaning Data Course Project
 The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set.
 
 
-##Study design
+## Study design
 
-###Collection of the raw data Description of how the data was collected.
+### Collection of the raw data Description of how the data was collected.
 
-###Notes on the original (raw) data Some additional notes (if avaialble, otherwise you can leave this section out).
+### Notes on the original (raw) data Some additional notes (if avaialble, otherwise you can leave this section out).
 
-##Creating the tidy datafile
+## Creating the tidy datafile
 
-###Guide to create the tidy data file Description on how to create the tidy data file (1. download the data, ...)/
+### Guide to create the tidy data file Description on how to create the tidy data file (1. download the data, ...)/
 
-###Cleaning of the data Short, high-level description of what the cleaning script does. link to the readme document that describes the code in greater detail
+### Cleaning of the data Short, high-level description of what the cleaning script does. link to the readme document that describes the code in greater detail
 
-##Description of the variables in the tiny_data.txt file General description of the file including:
+## Description of the variables in the tiny_data.txt file General description of the file including:
 
    Dimensions of the dataset
     Summary of the data
@@ -23,10 +23,15 @@ The purpose of this project is to demonstrate your ability to collect, work with
 
 (you can easily use Rcode for this, just load the dataset and provide the information directly form the tidy data file)
 
-###Variable 1 (repeat this section for all variables in the dataset) Short description of what the variable describes.
+### Variable 1 (repeat this section for all variables in the dataset) Short description of what the variable describes.
+
+
 'data.frame':	180 obs. of  68 variables:
+
  $ Subject                                  : int  1 1 1 1 1 1 2 2 2 2 ...
+ 
  $ ActivityLabel                            : chr  "laying" "sitting" "standing" "walking" ...
+ 
  $ BodyAccelerometerMeanX                   : num  0.222 0.261 0.279 0.277 0.289 ...
  $ BodyAccelerometerMeanY                   : num  -0.04051 -0.00131 -0.01614 -0.01738 -0.00992 ...
  $ BodyAccelerometerMeanZ                   : num  -0.113 -0.105 -0.111 -0.111 -0.108 ...
