@@ -43,8 +43,8 @@ The raw data includes
 <table>
 <tr><th>File Name</th><th>Description</th></tr>
 <tr><td valign=top>README.md</td><td>Documentation explaining the project and how to use files contained in the repository.</td></tr>
-<tr><td valign=top>run_analysis.R</td><td>R script to read the Human Activity Recognition Using Smartphones Data Set and produce an ordered data set from it</td></tr>
-<tr><td valign=top>Codebook.md</td><td>Documentation about the variables and some other stuff</td></tr>
+<tr><td valign=top>run_analysis.R</td><td>R script to read the Human Activity Recognition Using Smartphones Data Set and produce an ordered data set from it(TidyData.txt).</td></tr>
+<tr><td valign=top>Codebook.md</td><td>Documentation about the study design and about the variables of TidyData.txt.</td></tr>
 </table>
 
 <h1 id=concepts>Key Concepts</h1>
@@ -78,5 +78,5 @@ In this section, any punctuation character is removed from the variable names of
 <h2>Obtain the Final Dataset</h2>
 Finally, we use the melt() function over meanStdData so that "Key", "Subject", "Activity", "ActivityLabel" remain as identifiers. This allows us to use dcast() to obtain the average of each variable by "Subject" and "ActivityLabel". This data set (finalData) is exported as "TidyData.txt". 
 
-<h2>Conclusion</h2>
-By analyzing the contents of the data and code book spreadsheet, it turns out that there is a very elegant R solution for processing this data. Substituting the high performance <code>readr::read_fwf()</code> for the base <code>read.fwf()</code> it also becomes a high performance solution.  
+<h2>Additional notes</h2>
+Despite finalData is the only data frame that it is exported, there are another data frames that the R script generates. inertialSignalData is important, since it allows to calculate additional features not included in X_train.txt|X_test.txt. featuresData contains all the features of that files. And finally, meanStdData has the data before melting.
